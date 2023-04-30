@@ -2,11 +2,7 @@ package com.company;
 
 public class Geometry extends Math {
 
-    void accessPI(){
-        System.out.println(getPI());
-        setPI(34);
-        System.out.println(getPI());
-    }
+
 
     float areaOfSquare (int length){
         return powerOfTwo(length);
@@ -15,6 +11,8 @@ public class Geometry extends Math {
     float areaOfTriangle (float length, float breadth){
         return divide(1,2) * multiply(length,breadth);
     }
-
+    float areaOfCircle (float radius){
+        return 2 * multiply(getPI(),powerOfTwo((int)radius));
+    }
 
 }
