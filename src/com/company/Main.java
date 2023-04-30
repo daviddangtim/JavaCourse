@@ -6,7 +6,7 @@ import java.util.Scanner;
 class Main {
 
     public static void main(String[] args) {
-//        Instantiazation
+//        Instantiation
        Physics physicsInstance = new Physics();
 
 //       User Choice Input Reading
