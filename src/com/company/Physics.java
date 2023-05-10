@@ -11,7 +11,7 @@ public class Physics extends Math{
         this.GRAVITY = GRAVITY;
     }
 
-    public double kineticEnergy(float mass, float velocity){
+    public float kineticEnergy(float mass, float velocity){
         return divide(1,2) * multiply(mass,powerOfTwo((int)velocity));
     }
 
@@ -32,6 +32,7 @@ public class Physics extends Math{
     public double density(float mass, float volume){
         return divide(mass,volume);
     }
+
 
 
 }

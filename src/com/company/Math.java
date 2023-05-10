@@ -18,7 +18,7 @@ public class Math {
         return numberOne + numberTwo;
     }
     float subtract (float numberOne, float numberTwo){
-        return numberOne - numberOne;
+        return numberOne - numberTwo;
     }
 //      Getter and Setter
     public float getPI() {

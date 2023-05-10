@@ -1,10 +1,13 @@
 package com.company;
 
 public class Geometry extends Math {
+     public Geometry(){
+
+        System.out.println("Constructor called");
+    }
 
 
-
-    float areaOfSquare (int length){
+    public float areaOfSquare (int length){
         return powerOfTwo(length);
 
     }
@@ -15,7 +18,13 @@ public class Geometry extends Math {
     }
 
     float areaOfCircle (float radius){
+
         return 2 * multiply(getPI(),powerOfTwo((int)radius));
     }
 
+
+
+    public float areaOfRectangle(float parseFloat, float length, float breadth) {
+        return multiply(length,breadth);
+    }
 }
