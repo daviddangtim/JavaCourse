@@ -202,7 +202,7 @@ public class PhysicsUi {
             @Override
             public void actionPerformed(ActionEvent e) {
 //                This is the variable to solve all the stuff
-                float acceleration = (float) phy.density(Float.parseFloat(enterMass.getText()),
+                float density = (float) phy.density(Float.parseFloat(enterMass.getText()),
                         Float.parseFloat(enterVolume.getText()));
 //                This prints the solution in a neat box
                 JOptionPane.showMessageDialog(null, density,
