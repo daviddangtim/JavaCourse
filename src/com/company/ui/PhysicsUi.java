@@ -2,6 +2,7 @@ package com.company.ui;
 
 
 import com.company.Physics;
+import files.FileWriteMain;
 
 import javax.swing.*;
 import java.awt.*;
@@ -113,7 +114,11 @@ public class PhysicsUi {
             public void actionPerformed(ActionEvent e) {
                 float kinEnergy = phy.kineticEnergy(Float.parseFloat(enterMass.getText()),
                         Float.parseFloat(enterVelocity.getText()));
-                JOptionPane.showMessageDialog(null, kinEnergy, "The Kinetic Energy is:", JOptionPane.INFORMATION_MESSAGE);
+//                JOptionPane.showMessageDialog(null, kinEnergy, "The Kinetic Energy is:", JOptionPane.INFORMATION_MESSAGE);
+                FileWriteMain writeMain = new FileWriteMain();
+                writeMain.writeData("The Kinetic Energy with mass"+enterMass.getText() +"and velocity"
+                        + enterVelocity.getText()
+                        +"is"+ kinEnergy);
             }
 
 
