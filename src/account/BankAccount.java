@@ -8,6 +8,10 @@ public class BankAccount {
         this.balance = initialBalance;
     }
 
+    public BankAccount() {
+
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }

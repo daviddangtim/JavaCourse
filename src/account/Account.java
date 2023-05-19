@@ -39,7 +39,16 @@ public class Account {
 
     }
     public void drawAccountsFrame(){
+        BankAccount bankAccount = new BankAccount();
+        mainFrame.add(currentAccount);
+        mainFrame.add(savingsAccount);
 
+        currentAccount.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 }
