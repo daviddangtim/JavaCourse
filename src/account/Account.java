@@ -31,6 +31,8 @@ public class Account {
     }
 
     public void mainUi( ) {
+        BankAccount bankAccount = new BankAccount();
+
         mainFrame.add(passwordField);
         mainFrame.add(passwordSubmit);
 
@@ -80,9 +82,22 @@ public class Account {
         mainFrame.add(withdraw);
         mainFrame.add(withdrawAmount);
 
+        BankAccount bankAccount = new BankAccount();
+
+        deposit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               float deposit = bankAccount.deposit(Float.parseFloat(depositAmount.getText()));
+               JOptionPane.showMessageDialog(null,"The amount of:"+depositAmount+"has been deposited","Confirmation Dialog",JOptionPane.INFORMATION_MESSAGE);
+
+            }
+        });
 
 
 
+        mainFrame.setLayout(new GridLayout(2,2));
+        mainFrame.setSize(150,200);
+        mainFrame.setVisible(true);
     }
 
 }

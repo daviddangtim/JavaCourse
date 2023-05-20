@@ -20,13 +20,14 @@ public class BankAccount {
         return balance;
     }
 
-    public void deposit(double amount) {
+    public float deposit(double amount) {
         if (amount > 0) {
             balance += amount;
             System.out.println("Deposited: $" + amount);
         } else {
             System.out.println("Invalid amount. Please deposit a positive value.");
         }
+        return 0;
     }
 
     public void withdraw(double amount) {
