@@ -14,6 +14,15 @@ public class Account {
 
     JButton currentAccount = new JButton("Current");
     JButton savingsAccount = new JButton("Savings");
+
+//    these are for the things for the Current Account
+    JButton deposit = new JButton("Deposit");
+    JTextField depositAmount = new JTextField("Enter the deposit amount");
+
+    JButton withdraw = new JButton("Withdraw");
+    JTextField withdrawAmount = new JTextField("Enter the withdraw amount");
+
+
     public static void main(String[] args) {
 
 
@@ -32,12 +41,20 @@ public class Account {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame accountsFrame = new JFrame("Accounts");
+                int pin = (int) Float.parseFloat(passwordField.getText());
+                if (pin != 5555){
+                    JOptionPane.showMessageDialog(null, pin,
+                            "The Pin you entered is wrong", JOptionPane.INFORMATION_MESSAGE);
+                } else{
+                    drawAccountsFrame();
+                }
+
 
             }
         });
 
 
-
+        mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
     public void drawAccountsFrame(){
         BankAccount bankAccount = new BankAccount();
@@ -47,9 +64,25 @@ public class Account {
         currentAccount.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                drawCurrentAccount();
+                JOptionPane.showMessageDialog(null,"You Have Chosen Current Account","Current Account",JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
+        mainFrame.setLayout(new GridLayout(2,1));
+        mainFrame.setSize(150,200);
+        mainFrame.setVisible(true);
+    }
+
+    public void drawCurrentAccount(){
+        mainFrame.add(deposit);
+        mainFrame.add(depositAmount);
+        mainFrame.add(withdraw);
+        mainFrame.add(withdrawAmount);
+
+
+
+
     }
 
 }
