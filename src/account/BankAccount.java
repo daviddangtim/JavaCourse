@@ -30,7 +30,7 @@ public class BankAccount {
         return 0;
     }
 
-    public void withdraw(double amount) {
+    public float withdraw(double amount) {
         if (amount > 0) {
             if (balance >= amount) {
                 balance -= amount;
@@ -41,6 +41,7 @@ public class BankAccount {
         } else {
             System.out.println("Invalid amount. Please withdraw a positive value.");
         }
+        return 0;
     }
 }
 
