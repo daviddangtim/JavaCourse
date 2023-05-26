@@ -39,7 +39,7 @@ public class BankAccount {
                 System.out.println("Insufficient funds. Unable to withdraw $" + amount);
             }
         } else {
-            System.out.println("Invalid amount. Please withdraw a positive value.");
+            System.out.println("Invalid amount. Please withdraw a positive    value.");
         }
         return 0;
     }
