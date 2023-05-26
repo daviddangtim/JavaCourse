@@ -104,7 +104,7 @@ public class Account {
         withdraw.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                float withdraw = bankAccount.withdraw(Float.parseFloat(withdrawAmount.getText()));
+                float withdraw = (float) bankAccount.withdraw(Float.parseFloat(withdrawAmount.getText()));
                 JOptionPane.showMessageDialog(null,withdraw,"Amount Withdrawn",JOptionPane.INFORMATION_MESSAGE);
             }
         });

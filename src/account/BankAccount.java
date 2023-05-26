@@ -30,7 +30,7 @@ public class BankAccount {
         return 0;
     }
 
-    public float withdraw(double amount) {
+    public double withdraw(double amount) {
         if (amount > 0) {
             if (balance >= amount) {
                 balance -= amount;
