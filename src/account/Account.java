@@ -9,7 +9,7 @@ public class Account {
 //    this is the main frame when you run the program, it asks for the user password
     JFrame mainFrame = new JFrame("Bank Application");
 
-    JTextField passwordField = new JTextField("Enter your password:");
+    JTextField passwordField = new JTextField("Enter your password");
     JButton passwordSubmit = new JButton("Enter");
 
     JButton currentAccount = new JButton("Current");
